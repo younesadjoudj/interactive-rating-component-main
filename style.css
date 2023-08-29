@@ -1,0 +1,165 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --clr-primary-Orange: hsl(25, 97%, 53%);
+
+    /* Neutral */
+    --clr-neutral-White: hsl(0, 0%, 100%);
+    --clr-neutral-Light-Grey: hsl(217, 12%, 63%);
+    --clr-neutral-Medium-Grey: hsl(217, 10%, 35%);
+    --clr-neutral-Dark-Blue: hsl(213, 19%, 18%);
+    --clr-neutral-Very-Dark-Blue: hsl(216, 12%, 8%);
+
+    /* Fonts */
+    --ff-Overpass: 'Overpass', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* Some CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*  Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+/* 6. Remove built-in form typography styles */
+button {
+    font: inherit;
+}
+/* 7. Avoid text overflows */
+p, h1 {
+    overflow-wrap: break-word;
+}
+/* 8. Create a root stacking context */
+#root, #__next {
+    isolation: isolate;
+}
+
+/* General Styling */
+
+body {
+    background-color: var(--clr-neutral-Very-Dark-Blue);
+    font-size: .9375rem;
+    font-family: var(--ff-Overpass);
+    font-weight: var(--fw-regular);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--clr-neutral-Dark-Blue);
+    font-weight: var(--fw-bold);
+    max-width: 450px;
+    min-height: 375px;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+/* Rating initial state */
+
+.icon {
+    background-color: var(--clr-neutral-Medium-Grey);
+}
+
+h1 {
+    color: var(--clr-neutral-White);
+}
+
+p {
+    color: var(--clr-neutral-Light-Grey);
+}
+
+.rate {
+    color: var(--clr-neutral-Light-Grey);
+    background-color: var(--clr-neutral-Medium-Grey);
+    cursor: pointer;
+}
+
+.rate:hover {
+    background-color:  hsl(217, 9%, 48%);
+    color: var(--clr-neutral-White);
+}
+
+.btn {
+    color: var(--clr-neutral-White);
+    background-color: var(--clr-primary-Orange);
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    width: 100%;
+    border: none;
+    border-radius: 2em;
+    padding: .8em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--clr-primary-Orange);
+    background-color: var(--clr-neutral-White);
+}
+
+.mb-x {
+    margin: .5rem 0;
+}
+
+.mb-xx {
+    margin: 1rem 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Rating (thank you) state */
+
+.screen-thank-you {
+    display: none;
+}
+
+.illustration img {
+    margin: 0 auto;
+}
+
+.screen-thank-you :is(p, h1) {
+    text-align: center;
+}
+
+.selected {
+    color: var(--clr-primary-Orange);
+    background-color: var(--clr-neutral-Medium-Grey);
+    width: max-content;
+    padding: .5em 1em;
+    margin: 0 auto;
+    border-radius: 2em;
+}
