@@ -71,10 +71,9 @@ body {
 .container {
     background-color: var(--clr-neutral-Dark-Blue);
     font-weight: var(--fw-bold);
-    max-width: 450px;
-    min-height: 375px;
+    max-width: 400px;
     padding: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 1.2rem;
 }
 
 .circle {
