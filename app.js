@@ -5,6 +5,7 @@ let rate = document.querySelectorAll(".rate");
 let rateSelected = document.querySelector('.rate-selected');
 
 let lastClickedRate = null;
+rateSelected.textContent = "";
 
 rate.forEach((div) => {
     div.addEventListener('click', function() {
@@ -21,7 +22,12 @@ rate.forEach((div) => {
     }); 
 });
 
-btn.addEventListener("click", () => {
-    primaryScreen.style.display = "none"; 
-    thankYouScreen.style.display = "initial";
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(rateSelected.textContent == "") {
+        window.alert("Please choose an option and try again");
+    } else {
+        primaryScreen.style.display = "none"; 
+        thankYouScreen.style.display = "initial";    
+    }
 } );
